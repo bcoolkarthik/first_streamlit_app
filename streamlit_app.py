@@ -3,8 +3,6 @@ import pandas
 import requests
 import snowflake.connector
 from urllib.error import URLError
-cffi == 1.15.0
-pyarrow==6.0.1
 streamlit.header('🥣 Breakfast Menu')
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 streamlit.text('🥗 Omega 3 & Blueberry Oatmeal')
