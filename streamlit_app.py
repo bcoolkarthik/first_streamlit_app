@@ -36,8 +36,15 @@ if streamlit.button('Get fruit load list'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    role= "accountadmin"
    my_data_rows = get_fruit_load_list()
+   my_cnx.close()     
    streamlit.dataframe(my_data_rows)
-streamlit.stop()
+
+def insert_row_snowflake(new_fruit):
+        with my_cnx.cursor() as my_cur:
+        my_cur.execute("insert into fruit_load_list values ('" + +"')")
+        return "THanks for Adding " + new_fruit
+
+#streamlit.stop()
 try:
     fruit_choice = streamlit.text_input('What fruit would you like information about?')
     if not fruit_choice:
