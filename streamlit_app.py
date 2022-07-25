@@ -27,7 +27,7 @@ def get_fruit_load_list():
    return my_cur.fetchall()
 
 if streamlit.button('Get fruit load list'):
-   streamlit.text("clicked!!!!!!!!!!!!!!!!!!!!"     
+   streamlit.text("clicked!!!!!!!!!!!!!!!!!!!!")   
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    role= "accountadmin"
    my_data_rows = get_fruit_load_list()
