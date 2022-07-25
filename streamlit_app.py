@@ -25,7 +25,9 @@ streamlit.header("Fruityvice Fruit Advice!")
 
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
-     role= "accountadmin"      
+     role= "accountadmin"
+     cffi == 1.15.0
+     pyarrow==6.0.1
      streamlit.text("Snoflake function being called!!!!!!!!!!")
      my_cur.execute("SELECT * from fruit_load_list")
 
