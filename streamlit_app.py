@@ -27,5 +27,5 @@ streamlit.text("Fruit load list contains")
 streamlit.dataframe(my_data_row)
 role= "accountadmin"
 
-add_my_fruit = streamlit.text_input('What fruit would you like information about?','Kiwi')
+add_my_fruit = streamlit.text_input('What fruit would you like information about?','Banana')
 streamlit.write('Thanks for adding ', add_my_fruit)
