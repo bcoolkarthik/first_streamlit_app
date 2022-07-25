@@ -21,8 +21,9 @@ def get_fruityvice_data(this_fruit_choice):
 streamlit.header("Fruityvice Fruit Advice!")
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
-      my_cur.execute("SELECT * from fruit_load_list")
-      role= "accountadmin"
+     role= "accountadmin"      
+     my_cur.execute("SELECT * from fruit_load_list")
+      
    return my_cur.fetchall()
 
 if streamlit.button('Get fruit load list'):
