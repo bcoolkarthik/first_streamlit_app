@@ -28,7 +28,8 @@ def get_fruit_load_list():
      role= "accountadmin"      
      streamlit.text("Snoflake function being called!!!!!!!!!!")
      my_cur.execute("SELECT * from fruit_load_list")
-return my_cur.fetchall()
+
+   return my_cur.fetchall()
 
 if streamlit.button('Get fruit load list'):
    streamlit.text("clicked!!!!!!!!!!!!!!!!!!!!")   
