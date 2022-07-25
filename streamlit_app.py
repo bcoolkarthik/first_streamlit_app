@@ -60,13 +60,14 @@ except URLError as e:
 
 
 
-my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from fruit_load_list")
-my_data_row = my_cur.fetchall()
-streamlit.text("Fruit load list contains")
-streamlit.dataframe(my_data_row)
-role= "accountadmin"
+#my_cur = my_cnx.cursor()
+#my_cur.execute("SELECT * from fruit_load_list")
+#my_data_row = my_cur.fetchall()
+#streamlit.text("Fruit load list contains")
+#streamlit.dataframe(my_data_row)
+#role= "accountadmin"
 
 add_my_fruit = streamlit.text_input('What fruit would you like information about?','Banana')
 streamlit.write('Thanks for adding ', add_my_fruit)
 my_cur.execute("insert into fruit_load_list values ('from strealmit')")
+streamlit.stop()
