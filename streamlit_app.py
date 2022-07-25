@@ -26,3 +26,6 @@ my_data_row = my_cur.fetchall()
 streamlit.text("Fruit load list contains")
 streamlit.dataframe(my_data_row)
 role= "accountadmin"
+
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('Thanks for adding ', fruit_choice)
