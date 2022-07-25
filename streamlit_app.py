@@ -39,10 +39,7 @@ if streamlit.button('Get fruit load list'):
    my_cnx.close()     
    streamlit.dataframe(my_data_rows)
 
-def insert_row_snowflake(new_fruit):
-        with my_cnx.cursor() as my_cur:
-           my_cur.execute("insert into fruit_load_list values ('" + new_fruit +"')")
-        return "THanks for Adding " + new_fruit
+
 
 #streamlit.stop()
 try:
@@ -58,7 +55,7 @@ try:
 except URLError as e:
    streamlit.error()
 
-
+streamlit.stop()
 
 #my_cur = my_cnx.cursor()
 #my_cur.execute("SELECT * from fruit_load_list")
@@ -70,5 +67,5 @@ except URLError as e:
 add_my_fruit = streamlit.text_input('What fruit would you like information about?','Banana')
 streamlit.write('Thanks for adding ', add_my_fruit)
 my_cur.execute("insert into fruit_load_list values ('from strealmit')")
-streamlit.stop()
+
 
